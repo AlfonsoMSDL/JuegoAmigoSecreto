@@ -16,20 +16,22 @@ function agregarAmigo() {
         document.getElementById("listaAmigos").innerHTML = "";
 
         //Mostrando todos los amigos
-        for(let i = 0; i < listaAmigos.length; i++){
-            //Voy acumulando los amigos en la lista
-            document.getElementById("listaAmigos").innerHTML += "<li>"+listaAmigos[i]+"</li>";
-        }
-
+        mostrarAmigos();
 
         limpiarInput();
     }
 }
 
 function sortearAmigo() {
-
 }
 
 function limpiarInput(){
     document.getElementById("amigo").value = "";
+}
+
+function mostrarAmigos(){
+    for(let i = 0; i < listaAmigos.length; i++){
+        //Voy acumulando los amigos en la lista
+        document.getElementById("listaAmigos").innerHTML += "<li>"+listaAmigos[i]+"</li>";
+    }
 }
