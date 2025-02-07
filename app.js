@@ -23,6 +23,14 @@ function agregarAmigo() {
 }
 
 function sortearAmigo() {
+    let cantidadAmigos = listaAmigos.length;
+    let numeroAleatorio = Math.floor(Math.random()*cantidadAmigos);
+
+    let amigoElegido = listaAmigos[numeroAleatorio];
+
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "El amigo secreto sorteado es: "+amigoElegido;
+
 }
 
 function limpiarInput(){
